@@ -125,13 +125,17 @@ En `appsettings.Production.json` (o User Secrets / Env Vars):
 
 ## 6. Frontend — Variable de entorno
 
-Crear `.env.production` antes del build:
+Crear `social-platform-frontend/.env.production` antes del build:
 
 ```
-VITE_API_URL=https://api.spi.ci.org/api
+VITE_API_URL=https://spi.ci.org/api
+VITE_BASE_PATH=/inscripciones/
 ```
 
 Luego: `npm run build`
+
+> `VITE_BASE_PATH` define la sub-ruta donde está montado el frontend.
+> Si se despliega en la raíz del dominio, omitir esta variable (o dejarla en `/`).
 
 ---
 
